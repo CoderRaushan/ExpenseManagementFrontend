@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="iocn" href="/iocn.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Personal Expense Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Management System</h1>
+        <form id="expense-form">
+            <input type="text" id="item-name"name="item_name" placeholder="Item Name" required>
+            <input type="number" id="item-cost" name="cost" placeholder="Cost" required>
+            <select id="item-category" name="item_category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Mess">Mess</option>
+                <option value="Transfer">Transfer</option>
+                <option value="Education">Education</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Saturday market">Saturday market</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="hidden" id="edit-expense-id">
+            <input type="submit" value="Add Item">
+        </form>
+
+        <canvas id="expense-chart" width="400" height="200"></canvas>
+
+        <div id="monthly-expense-list" class="expense-list">
+            <h2>Monthly Expenses</h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
