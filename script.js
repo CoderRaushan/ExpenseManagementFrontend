@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Fetch expenses from the server
   async function fetchExpenseData() {
     try {
-      const response = await fetch("http://localhost:1234/Expense/GetExpense");
+      const response = await fetch("https://expensemanagementbackend-v1hp.onrender.com/Expense/GetExpense");
       if (!response.ok) {
         throw new Error("Failed to fetch expenses!");
       }
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       _id: expenseId,
     };
     if (currentEditIndex !== null) {
-      const res = await fetch("http://localhost:1234/Expense/EditExpense", {
+      const res = await fetch("https://expensemanagementbackend-v1hp.onrender.com/Expense/EditExpense", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(expense),
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     } else {
       try {
         const response = await fetch(
-          "http://localhost:1234/Expense/AddExpense",
+          "https://expensemanagementbackend-v1hp.onrender.com/Expense/AddExpense",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
