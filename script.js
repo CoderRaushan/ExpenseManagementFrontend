@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       item: itemName,
       cost: parseFloat(itemCost),
       category: itemCategory,
-      date: expenseDate,
+      date: "11/OCT/2024",
       _id: expenseId,
     };
     if (currentEditIndex !== null) {
